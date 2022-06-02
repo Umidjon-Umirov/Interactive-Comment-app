@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useDispatch } from 'react-redux';
+import Comments from './components/Comments';
+import InputField from './components/InputField';
+import {addComment} from './store/slice'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const dispatch=useDispatch();
+    function handlerAddMessage(obj){
+        dispatch(addComment(obj))
+    }
+    return (
+        <div className='wrapper'>
+            <Comments/>
+            <InputField handlerAddComment={handlerAddMessage} btnText={'SEND'}/>
+        </div>
+    )
 }
 
 export default App;

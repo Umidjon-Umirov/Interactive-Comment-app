@@ -1,13 +1,269 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #F5F6FA;
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+
+}
+p,h1,h2,h3,h4,h5,h6{
+  padding: 0;
+  margin: 0;
+}
+:root {}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 15px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Comments {
+  width: 100%;
+}
+
+.comment {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+}
+
+button {
+  transition: all .2s linear;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+.comment-body {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  max-width: 100%;
+  padding: 10px;
+  background: #fff;
+
+}
+
+.comment-main {
+  width: 93%;
+  position: relative;
+
+
+}
+
+.comment-relations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  background: #F5F7F4;
+  height: 70px;
+  flex-basis: 30px;
+  width: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.comment-likescount {
+  color: #5358B6;
+  font-weight: 700;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 15px;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.time {
+  opacity: .8;
+}
+
+.reply {
+  margin-left: auto;
+  background: inherit;
+  border: none;
+
+}
+
+.reply-text {
+  margin-left: 6px;
+  font-weight: 700;
+  color: #5358B6;
+}
+
+.content {
+  line-height: 1.4;
+  opacity: .8;
+  margin-bottom: 5px;
+  padding: 15px 0px;
+  max-width: 95%;
+}
+
+.replies {
+  position: relative;
+  margin-left: 60px;
+}
+
+.replies::before {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: rgb(194, 187, 187);
+}
+
+.InputField {
+  max-width: 100%;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px;
+}
+
+.inputField-body {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.form {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form button {}
+
+@media(max-width:468px) {
+  .form{
+    row-gap: 10px;
+  }
+  .form button {
+    margin-left: auto;
+  }
+}
+@media(max-width:446px) {
+  .comment-header{
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+  .time{
+    margin-left: auto;
+  }
+}
+
+
+textarea {
+  flex-grow: 1;
+  margin-inline: 10px;
+  border: 1px solid rgb(238, 224, 224);
+  resize: none;
+  padding: 10px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.submit-btn, .update-btn {
+  background: #5358B6;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+  color: #fff;
+  border: none;
+}
+
+.content {}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-btn {
+  margin-left: auto;
+}
+
+.user-btn span {
+  font-weight: 700;
+}
+
+.user-btn button {
+  background: none;
+  border: none;
+}
+
+.delete-text {
+  font-weight: 500;
+  color: rgb(243, 87, 87);
+  margin-left: 8px;
+}
+
+.edit-text {
+  color: #2731e0;
+  margin-left: 8px;
+}
+
+.edit-btn {
+  margin-left: 10px;
+}
+
+.user-you {
+  color: #fff;
+  background: #5358B6;
+  padding: 2px 5px;
+  font-size: .8rem;
+  font-weight: 400;
+  margin-left: 5px;
+  border: none;
+}
+
+.editTextarea {
+  width: 400px;
+  height: 90px;
+  display: block;
+  border: 1px solid #5358B6;
+  font-size: 1rem;
+
+}
+
+.update-btn {
+  margin-left: auto;
+  display: block;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+@media(max-width:576px) {
+  .user-btn {
+    position: absolute;
+    bottom: -3%;
+    left: 0;
+
+  }
+
+  .reply {
+    position: absolute;
+    bottom: -3%;
+    right: 0;
+  }
 }
