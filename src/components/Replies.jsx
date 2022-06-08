@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import plus from '../images/icon-plus.svg';
 import minus from '../images/icon-minus.svg';
 import reply from '../images/icon-reply.svg';
@@ -12,9 +12,10 @@ import {
     addLikes,
     removeLikes,
 } from '../store/slice';
+import { motion } from 'framer-motion';
 const likesBtns = { p: true, m: true };
 
-const Replies = ({
+const Replies = forwardRef(({
     score,
     CommentId,
     user,
@@ -22,7 +23,7 @@ const Replies = ({
     content,
     replyingTo,
     id,
-}) => {
+},ref) => {
     function dispatchAddLikes(obj) {
         if (likesBtns.p) {
             dispatch(addLikes(obj));
@@ -68,7 +69,7 @@ const Replies = ({
             </button>
         );
     return (
-        <div className='replies comment-body'>
+        <div ref={ref} className='replies comment-body'>
             <div className='comment-relations'>
                 <button
                     style={{ background: 'none', border: 'none' }}
@@ -136,6 +137,7 @@ const Replies = ({
             </div>
         </div>
     );
-};
+})
 
 export default Replies;
+export const MotionReplies=motion(Replies)

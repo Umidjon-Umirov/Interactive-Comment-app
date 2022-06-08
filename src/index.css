@@ -8,16 +8,18 @@ body {
   box-sizing: border-box;
 
 }
-p,h1,h2,h3,h4,h5,h6{
+
+p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
+
 :root {}
 
 .wrapper {
   max-width: 600px;
   margin: 0 auto;
-  padding: 50px 15px;
+  padding: 50px 15px 10px;
 }
 
 .Comments {
@@ -151,19 +153,22 @@ button:hover {
 .form button {}
 
 @media(max-width:468px) {
-  .form{
+  .form {
     row-gap: 10px;
   }
+
   .form button {
     margin-left: auto;
   }
 }
+
 @media(max-width:446px) {
-  .comment-header{
+  .comment-header {
     flex-wrap: wrap;
     row-gap: 2px;
   }
-  .time{
+
+  .time {
     margin-left: auto;
   }
 }
@@ -266,4 +271,8 @@ textarea:focus {
     bottom: -3%;
     right: 0;
   }
+}
+
+button:hover {
+  cursor:pointer;
 }
