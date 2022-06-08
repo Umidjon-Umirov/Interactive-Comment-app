@@ -139,9 +139,9 @@ export const commentSlice = createSlice({
                     if (c.id === action.payload.CommentId) {
                         if (!c.replies) {
                             c.replies = [];
-                            c.replies.push(action.payload);
+                            c.replies.unshift(action.payload);
                         } else {
-                            c.replies.push(action.payload);
+                            c.replies.unshift(action.payload);
                         }
                     }
                     return c;

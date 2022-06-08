@@ -1,7 +1,6 @@
 import React, { forwardRef, useState } from 'react';
 import plus from '../images/icon-plus.svg';
 import minus from '../images/icon-minus.svg';
-import reply from '../images/icon-reply.svg';
 import deleteIcon from '../images/icon-delete.svg';
 import editIcon from '../images/icon-edit.svg';
 import { useDispatch, useSelector } from 'react-redux';
@@ -62,12 +61,7 @@ const Replies = forwardRef(({
                     <span className='edit-text'>Edit</span>
                 </button>
             </div>
-        ) : (
-            <button className='reply'>
-                <img src={reply} alt='' />
-                <span className='reply-text'>Reply</span>
-            </button>
-        );
+        ) : null
     return (
         <div ref={ref} className='replies comment-body'>
             <div className='comment-relations'>
