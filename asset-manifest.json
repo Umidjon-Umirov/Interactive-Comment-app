@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Interactive-Comment-app/static/css/main.6871c443.css",
-    "main.js": "/Interactive-Comment-app/static/js/main.2003e09b.js",
+    "main.css": "/Interactive-Comment-app/static/css/main.5c03603d.css",
+    "main.js": "/Interactive-Comment-app/static/js/main.7deb27a6.js",
     "index.html": "/Interactive-Comment-app/index.html",
     "static/media/icon-plus.svg": "/Interactive-Comment-app/static/media/icon-plus.0037a825a550965779412c2890bd328b.svg",
     "static/media/icon-edit.svg": "/Interactive-Comment-app/static/media/icon-edit.b0c7f9ebaec367bd3ae2539df8b55ff9.svg",
     "static/media/icon-reply.svg": "/Interactive-Comment-app/static/media/icon-reply.bfb4589d45cd96abd45e3b82f7e7bbc6.svg",
     "static/media/icon-minus.svg": "/Interactive-Comment-app/static/media/icon-minus.4aa6933cb1575b3c54fa67d84a61efaf.svg",
     "static/media/icon-delete.svg": "/Interactive-Comment-app/static/media/icon-delete.86cedbf2e37529f9c8f1f744254059b0.svg",
-    "main.6871c443.css.map": "/Interactive-Comment-app/static/css/main.6871c443.css.map",
-    "main.2003e09b.js.map": "/Interactive-Comment-app/static/js/main.2003e09b.js.map"
+    "main.5c03603d.css.map": "/Interactive-Comment-app/static/css/main.5c03603d.css.map",
+    "main.7deb27a6.js.map": "/Interactive-Comment-app/static/js/main.7deb27a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.6871c443.css",
-    "static/js/main.2003e09b.js"
+    "static/css/main.5c03603d.css",
+    "static/js/main.7deb27a6.js"
   ]
 }
